@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>PDF to HTML online converter - Convert PDF to HTML for FREE</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAACMuAAAjLgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALGf3Oyxo94crbPO1KnHzeit28xQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOn64DFo7DDByB0QUcgdIPKnzyeC6D+P8rf/TLLH71FgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+dsBEOnbB/EaGzxxOnteYUq7XoEqmy0BacwI4xoOlsOqD7/S2M9tYsgvUzAAAAAAAAAAAAAAAAAAAAAAAAAAAPnrGwF6m9/yXA1v8z0OP/N9Tl/zPP3f8nws3/MbbQele++po4ovn/LIn1nwAAAAAAAAAAAAAAAA6dsAEQn7KYH7jN/y7P3r5DxrCTS8Wlo0jXzoxF5PS4Q+Lv/zfQ2fFZzOedUbX9/yyO9tojgP4IAAAAAAAAAAAOnbBEGa3B/y7O249OuYpYVaxm2E6zd/tJwZDgS867fUfg87hF5ez/XdbvuVy6/PwsjfnzN4DmDbqLRA8AAAAAE6S3uyW/0qk5pWZqWada+Fa4gf9fwJLceMeddFbVn0pD09BsSeX401HN84tTrPr/LYj/73KAngTQjixJAAAAABitxdQstKcaPZM1s1ytav9SvYrpmryMd923nVQAAAAAOMznMkfI+W1NqPfLUZ73/y9+/9V8fpULzo4smgAAAAAZr8l9AAAAAD2SL8tZr23/Z7uImdOycr6jnayWP4D+RjyZ/X9JmfbZTpT3/0aO//tPft1+wI5Ji8CHMr8AAAAAFKOyDDeWRQE5kjTJRKVa/5SyeIDXpGPn2q9z76ylpHxRiPOqQ4f/5UiK/8pvjc5irY1qkcaKL/+2gTRvAAAAAAAAAAAAAAAAOpM2rjmYQv9arnCavqBjtNKnaP/cr2v4vqiMpZCct4SemZmOypFB08eLLv+2gjSytIE0DQAAAAAAAAAAAAAAADqUOVE6lDj/MaBT8X2fX1LJjkrnwZFJ/8iVSf/NlD3/xIkv/7iCMf+0gTS2tYE0BAAAAAAAAAAAAAAAAAAAAAAAAAAAOpQ4hziYQf8+oFW4lYk9ZLF/Mbm6fjDUtn8x17SAM8q0gTR4tYE0DQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6lDh2OJU8/judTcxDnlFEg40/B7CCNAO9gDMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADqUODE5lTuoN5hB3DWZRJlElT4lAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAj/EAAAPAAAABgAAAgAEAAMwzAADIEwAAwYMAAOPHAADDhwAAwAMAAMwzAADMMwAAgAAAAAGAAAAP8AAAn/kAAA==" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css" /> </head>
+<body>
+	<header class="header bg-gradient">
+		<div class="container">
+			<div class="header__container flex flex-between">
+				<div class="logo__container flex">
+					<a href="index.html" target="_blank" class="logo__link">
+						<picture>
+							<source srcset="./assets/img/logo/aspose-logo.svg" type="image/webp"><img src="./assets/img/logo/aspose-logo.svg" class="logo__img" alt="aspose logo" height="175" width="54"></picture>
+					</a>
+				</div>
+				<div class="menu-btn">
+					<div class="menu-btn__burger"></div>
+				</div>
+				<div class="navigation__wrapper">
+					<nav class="navigation">
+						<ul class="navigation__list">
+							<li class="navigation__item">
+								<button id="btn-modal" class="navigation__link navigation__link--upload">Upload</button>
+								<div class="overlay" id="overlay"></div>
+								<div class="modal" id="modal"> Drop your file here
+									<button class="modal-close-btn icon-close" id="close-btn"></button>
+								</div>
+							</li>
+							<li class="navigation__item">
+								<button class="navigation__link navigation__link--remove">Add page</button>
+							</li>
+							<li class="navigation__item">
+								<button class="navigation__link navigation__link--remove">Remove page</button>
+							</li>
+						</ul>
+					</nav>
+					<div class="account__wrapper">
+						<ul class="account__list">
+							<li class="account__item"> <a href="#" class="account__link account__link--save">Save</a> </li>
+							<li class="account__item"> <a href="#" class="account__link account__link--user">Sign in</a> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="section section-editor">
+			<div class="container">
+				<div class="editor__wrapper">
+					<div class="editor__control">
+						<div class="editor__header">
+							<nav class="editor__navigation">
+								<ul class="editor__list flex">
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-text-height"><span>Text mode</span></button>
+										<div class="editor__dropdown">
+											<div class="option__text flex">
+												<div class="option__family">
+													<select id="family">
+														<option selected class="customOptionClass" value="Arial">Arial</option>
+														<option value="Times New Roman">Times New Roman</option>
+														<option value="Verdana">Verdana</option>
+													</select>
+												</div>
+												<div class="option__size">
+													<select id="size">
+														<option selected class="customOptionClass" value="8px">8px</option>
+														<option value="10px">10px</option>
+														<option value="12px">12px</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-pen-angled"><span>Signature</span></button>
+										<div class="editor__dropdown">Signature options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-highlight"><span>Highlight</span></button>
+										<div class="editor__dropdown">Highlight options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-pictures"><span>Insert image</span></button>
+										<div class="editor__dropdown">Insert image options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-search"><span>Search</span></button>
+										<div class="editor__dropdown">Search options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-point-up"><span>Read mode</span></button>
+										<div class="editor__dropdown">Read more options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-export"><span>Export file</span></button>
+										<div class="editor__dropdown">Export file options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-sort"><span>Move page</span></button>
+										<div class="editor__dropdown">Move page options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-drag"><span>Drag mode</span></button>
+										<div class="editor__dropdown">Drag mode options</div>
+									</li>
+									<li class="editor__item editor__item--hover">
+										<button class="editor__btn sz-10 icon-attachment"><span>Atachments</span></button>
+										<div class="editor__dropdown">Atachment options</div>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="editor__page"> </div>
+					<div class="counter__page center"> <span class="counter__info sz-14 fw-600">Page 1</span>
+						<ul class="counter__list flex flex-between">
+							<li class="counter__item">
+								<button class="counter__btn btn--prev icon-chevron-thin-left">prev</button>
+							</li>
+							<li class="counter__item">
+								<button class="counter__btn btn--next icon-chevron-thin-right">next</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container center"> footer must be here </div>
+	</footer>
+	<script src="js/libs/libs.min.js"></script>
+	<script src="js/script.min.js"></script>
+</body>
+</html>

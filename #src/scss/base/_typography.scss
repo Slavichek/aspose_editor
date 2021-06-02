@@ -1,0 +1,136 @@
+@import "./base/mixins",
+		"./base/functions",
+		"./base/variables",
+		"./base/media";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $headings-font-family;
+	color: $dark_txt_color
+	
+}
+
+h1 {
+	@include em-font-size(72);
+	line-height: (82 / 72);
+	font-weight: $headings_font_weight;
+	@include max-screen($phone) {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+h2 {
+	@include em-font-size(44);
+	line-height: (54 / 44);
+	font-weight: $semibold;
+	@include max-screen($phone) {
+		font-size: 26px;
+		line-height: (36 /26);
+	}
+	&.form__title {
+		font-size: 24px;
+		line-height: 34px;
+ 	}
+}
+h3 {
+	@include em-font-size(30);
+	line-height: (46 / 30);
+	font-weight: $normal;
+	@include max-screen($phone) {
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+h4 {
+	@include em-font-size(24);
+	line-height: (34 / 24);
+	font-weight: $normal;
+	@include max-screen($phone) {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
+// p {
+// 	@include em-font-size(16);
+// 	line-height: (26 / 16);
+// }
+p + p {
+	margin-top: rem-calc(10);
+}
+
+mark {
+	background: transparent;
+	color: $gray;
+}
+
+
+.txt{
+	&-white {
+		color: $white;
+	}
+	&-gray {
+		color: $gray;
+	}
+	&-error {
+		color: $danger;
+	}
+	&-sucess {
+		color: $success;
+	}
+}
+
+.fw-400 {
+	font-weight: $normal;
+}
+.fw-500 {
+	font-weight: $medium;
+}
+.fw-600 {
+	font-weight: $semibold;
+}
+.fw-700 {
+	font-weight: $bold;
+}
+
+.sz {
+	&-10 {
+		@include em-font-size(10);
+		line-height: (12 / 10);
+	}
+	&-12 {
+		@include em-font-size(12);
+		line-height: (16 / 12);
+	}
+	&-14 {
+		@include em-font-size(14);
+		line-height: (18 / 14);
+	}
+	&-18 {
+		@include em-font-size(18);
+		line-height: (28 / 18);
+	}
+	&-20 {
+		@include em-font-size(20);
+		line-height: (30 / 20);
+	}
+	&-22 {
+		@include em-font-size(22);
+		line-height: (32 / 22);
+	}
+	&-24 {
+		@include em-font-size(24);
+		line-height: (34 / 24);
+	}
+	&-26 {
+		@include em-font-size(26);
+		line-height: (36 / 26);
+	}
+	&-28 {
+		@include em-font-size(28);
+		line-height: (38 / 28);
+	}
+}

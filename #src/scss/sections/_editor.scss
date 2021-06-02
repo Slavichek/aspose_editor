@@ -1,0 +1,223 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.section {
+	&-editor {
+		padding: 5px 10px;
+		background: $bg_lblue;
+		height: 100%;
+		@include max-screen($phone) {
+			padding: 5px;
+		}
+		.container {
+			height: 100%;
+			@include max-screen($phone) {
+				padding: 0 5px;
+			}
+		}
+	}
+}
+.editor {
+	&__wrapper {
+		position: relative;
+		height: 100%;
+	}
+	&__control {
+		background: $light_black;
+		padding: 5px 10px;
+		@include max-screen($tablet) {
+			overflow: hidden;
+			overflow-x: scroll;
+		}
+	}
+	&__page {
+		position: relative;
+		background: $white;
+		width: 95%;
+		margin: 70px auto 30px;
+		min-height: 80%;
+		box-shadow: 0px 0px 9px 0px rgba(158, 166, 167, 0.9);
+	}
+	&__counter {
+		position: absolute;
+	}
+	&__item {
+		&--hover {
+			&:hover {
+				.editor__dropdown {
+					visibility: visible;
+					opacity: 1;
+					pointer-events: auto;
+				}
+			}
+		}
+		& + & {
+			margin-left: 10px;
+		} 
+	}
+	&__btn {
+		border: 1px solid $white;
+		background: transparent;
+		display: inline-block;
+		color: $white;
+		position: relative;
+		padding: 25px 5px 5px;
+		border-radius: 5px;
+		&:active, &:hover {
+			color: $yellow;
+			border-color: $yellow;
+		}
+		@include max-screen($tablet) {
+			width: 40px;
+			> span {
+				display: none;
+			}
+		}
+		
+	}	
+	&__dropdown {
+		// margin-top: 10px;
+		pointer-events: none;
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		background: $light_black;
+		padding: 5px 10px;
+		transition: all .35s ease-in;
+	}
+}
+.counter {
+	&__page {
+		position: fixed;
+		left: -70px;
+		top: 47%;
+		width: 200px;
+		height: 70px;
+		padding: 5px 10px;
+		background: $light_black;
+		border: 1px solid $light_black;
+		color: $yellow;
+		transform: rotate(270deg);
+		@include max-screen($phone) {
+			background: transparent;
+			color: $light_black;
+		}
+	}
+	&__list {
+		margin-top: 5px;
+	}
+	&__btn {
+		border: 1px solid $white;
+		width: 80px;
+		background: transparent;
+		display: inline-block;
+		color: $white;
+		position: relative;
+		padding: 5px 10px;
+		border-radius: 5px;
+		@include max-screen($phone) {
+			color: $light_black;
+		}
+		&:active, &:hover {
+			color: $yellow;
+			border-color: $yellow;
+			@include max-screen($phone) {
+				color: $light_black;
+				border-color: $light_black;
+			}
+		}
+		
+	}
+}
+.btn {
+	&--prev {
+		&.icon-chevron-thin-left:before {
+			left: 7px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+	}
+	&--next {
+		&.icon-chevron-thin-right:before {
+			left: calc(100% - 24px);
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+.box {
+	&-flex {
+		>div.slider {
+			&__info {
+				&-wrapper {
+					width: 40%;
+				}
+			}
+		}
+	}
+}
+
+.selectric {
+	&-wrapper {
+		width: 150px;
+		@include max-screen($tablet) {
+			width: 110px;
+		}
+		.selectric {
+			height: 40px;
+			background: $light_black;
+			border: 1px solid $white;
+			border-radius: 5px;
+			@include max-screen($tablet) {
+				height: 30px;
+			}
+			.label {
+				color: $white;
+			}
+			.button {
+				background: transparent;
+			}
+			&-items {
+				background: $light_black;
+				li {
+					height: 40px;
+					display: flex;
+					align-items: center;
+					color: $white;
+					@include max-screen($tablet) {
+						height: 30px;
+					}
+					&:hover,
+					&.selected {
+						color: $yellow;
+						background: $light_black;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+.option {
+	&__size {
+		margin: 0 10px;
+		.selectric {
+			&-wrapper {
+				width: 80px;
+			}
+		}
+	}
+}
+

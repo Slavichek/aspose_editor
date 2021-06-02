@@ -1,0 +1,22 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.footer {
+	background: $bg_black;
+	color: $gray;
+	font-size: 14px;
+}
+
+
+
+
+

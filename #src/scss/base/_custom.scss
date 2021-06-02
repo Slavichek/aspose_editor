@@ -1,0 +1,249 @@
+@import "mixins", "variables", "functions", "media";
+
+body,
+html {
+    overflow-x: hidden;
+    font-size: 100%;
+    height: 100%;
+	width: 100%;
+    margin: 0;
+	@include max-screen($widescreen) {
+		font-size: 95%;
+	}
+	@media (max-width: $desktop) {
+		font-size: 90%;
+	}
+	@include max-screen($tablet) {
+		font-size: 85%;
+	}
+}
+
+body {
+	
+	@include display-flex;
+    @include flex-direction(column);
+    flex: 1 0 auto;
+	color: $base-text-color;
+	background: $base-background-body;
+	font: #{$font_size_base}/#{$line_height_base} $base-font-family;
+	min-width: $base-min-width;
+	margin: 0;
+	padding: 0
+}
+
+main {
+	flex: 1 0 auto;
+	margin-top: 60px;
+}
+footer {
+    flex: 0 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+}	
+
+.container {
+    margin: 0 auto;
+    padding: $base_container_padding;
+    width: 100%;
+    max-width: 1800px;
+}
+
+.section {
+    position: relative;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.center {
+    text-align: center;
+	&-block {
+		margin: 0 auto;
+	}
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+
+.flex {
+    @include display-flex;
+}
+
+.flex-column {
+    @include display-flex;
+    @include flex-direction(column);
+}
+
+
+.flex-h-center {
+    @include align-items(center);
+}
+.flex-h-top {
+    @include align-items(flex-start);
+}
+.flex-h-bottom {
+    @include align-items(flex-end);
+}
+
+.flex-v-center {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-center {
+	@include display-flex;
+	justify-content: center;
+	@include align-items(center);
+}
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+.flex-bottom {
+    margin-top: auto;
+}
+
+.flex-wrap {
+    @include flex-wrap(wrap);
+}
+.box {
+	&-flex {
+		@include display-flex;
+		> div {
+			width: 50%;
+		}
+		@include max-screen($phone) {
+			@include flex-direction(column);
+			> div {
+				width: 100%;
+			}
+		}
+	} 
+}
+
+
+.mt {
+	&-5 {
+		margin-top: rem-calc(5);
+	}
+	&-10 {
+		margin-top: rem-calc(10);
+	}
+	&-15 {
+		margin-top: rem-calc(15);
+	}
+	&-20 {
+		margin-top: rem-calc(20);
+	}
+	&-25 {
+		margin-top: rem-calc(25);
+	}
+	&-30 {
+		margin-top: rem-calc(30);
+	}
+	&-35 {
+		margin-top: rem-calc(35);
+	}
+	&-40 {
+		margin-top: rem-calc(40);
+	}
+}
+.mb {
+	&-5 {
+		margin-bottom: rem-calc(5);
+	}
+	&-10 {
+		margin-bottom: rem-calc(10);
+	}
+	&-15 {
+		margin-bottom: rem-calc(15);
+	}
+	&-20 {
+		margin-bottom: rem-calc(20);
+	}
+	&-25 {
+		margin-bottom: rem-calc(25);
+	}
+	&-30 {
+		margin-bottom: rem-calc(30);
+	}
+	&-35 {
+		margin-bottom: rem-calc(35);
+	}
+	&-40 {
+		margin-bottom: rem-calc(40);
+	}
+}
+.ml {
+	&-5 {
+		margin-left: rem-calc(5);
+	}	
+	&-10 {
+		margin-left: rem-calc(10);
+	}	
+	&-15 {
+		margin-left: rem-calc(15);
+	}	
+	&-20 {
+		margin-left: rem-calc(20);
+	}	
+	&-25 {
+		margin-left: rem-calc(25);
+	}	
+	&-30 {
+		margin-left: rem-calc(30);
+	}	
+	&-35 {
+		margin-left: rem-calc(35);
+	}	
+	&-40 {
+		margin-left: rem-calc(40);
+	}	
+}
+.mr {
+	&-5 {
+		margin-right: rem-calc(5);
+	}	
+	&-10 {
+		margin-right: rem-calc(10);
+	}	
+	&-15 {
+		margin-right: rem-calc(15);
+	}	
+	&-20 {
+		margin-right: rem-calc(20);
+	}	
+	&-25 {
+		margin-right: rem-calc(25);
+	}	
+	&-30 {
+		margin-right: rem-calc(30);
+	}	
+	&-35 {
+		margin-right: rem-calc(35);
+	}	
+	&-40 {
+		margin-right: rem-calc(40);
+	}	
+}
+
+.bg {
+	&-gradient {
+		background: rgb(17,17,17);
+		background: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(163,163,240,0.6502976190476191) 100%);
+	}
+}
+svg:not(:root) {
+    overflow: hidden;
+}
